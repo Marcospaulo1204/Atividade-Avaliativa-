@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-:root{
-    --vermelho--ceep:#cc0000; 
-    --amarelo--ceep: #fcc200;
+/*Variaáveis de CSS*/
+:root {
+    --vermelho-ceep: #cc0000;
+    --amarelo-ceep: #fcc200;
     --cinza-claro: #c0c0c0;
     --branco-ceep: #f0f8ff;
     --texto: #333;
 }
 
-*{
-    /* Reset Global*/
-
-    margin: 0; 
+/*Reset Global*/
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -22,8 +21,8 @@ body {
     background-color: var(--cinza-claro);
     color: var(--texto);
     line-height: 1.6;
-
 }
+
 /*Cabeçalho*/
 header {
     background-color: var(--branco-ceep);
@@ -31,32 +30,31 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 4px solid var(--vermelho--ceep);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1) 
+    border-bottom: 4px solid var(--vermelho-ceep);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo-container img{
-    height:60px;
+.logo-container img {
+    height: 60px;
     margin-right: 15px;
 }
 
 /*Secao hero - banner principal, com gradiente*/
-
-.hero{
-    background: linear-gradient(135deg, var(--vermelho--ceep) 0%, #036 100%) ;
+.hero {
+    background: linear-gradient(135deg, var(--vermelho-ceep) 0%, #003366 100%);
     color: var(--branco-ceep);
-    padding:4rem 5%; 
+    padding: 4rem 5%;
     text-align: center;
-
 }
-.hero-ilustration{
+
+.hero-ilustration {
     font-size: 5rem;
     margin-bottom: 1rem;
     opacity: 0.9;
 }
-/*Container de categorias*/
 
-.container-categorias{
+/*CONTAINER DE CATEGORIAS*/
+.container-categorias {
     display: flex;
     gap: 2rem;
     padding: 3rem 5%;
@@ -64,9 +62,9 @@ header {
     justify-content: center;
 }
 
-/*Estilização dos cards*/
-.card-container {
-    background-color: var(--branco-ceep);
+/*ESTILIZAÇÃO DOS CARDS*/
+.card-categoria {
+    background: var(--branco-ceep);
     border-radius: 12px;
     padding: 2rem;
     flex: 1;
@@ -74,16 +72,14 @@ header {
     max-width: 500px;
     text-align: center;
     transition: transform 0.3s ease;
-    border-bottom: 8px solid var(--vermelho--ceep);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
-/*Você colocou card-container em vez de card-categoria - Sempre que for programar os card lembrar disso para não dar erro*/
-.card-container.subsequente {
-    border-color: var(--amarelo--ceep);
+
+.card-categoria.subsequente {
+    border-color: var(--amarelo-ceep);
+    border-bottom: 8px solid var(--vermelho-ceep);
 }
-.card-container:hover{
+
+.card-categoria:hover {
     transform: translateY(-10px);
 }
-
-
-
